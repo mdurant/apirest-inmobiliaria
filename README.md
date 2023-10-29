@@ -1,76 +1,76 @@
-# API REST inmobiliaria 
+# API REST inmobiliaria
+
+![Logo](https://easyupload.io/85kjea)
 
 Proyecto API Rest Inmobiliaria - PGSQL.
+Dependencias:
 
-# Dependencias:
+```bash
+  "Spring Web", "Spring Data JPA", "PostgreSQL Driver", "Lombok", "Spring Boot DevTools", "Swagger UI" y "Spring Boot Starter Logging".
+```
 
-1- En archivo src/main/resources/application.properties
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/api-sample-inmobiliaria
-spring.datasource.username=postgres
-spring.datasource.password=
-spring.jpa.hibernate.ddl-auto=update
+Descarga el proyecto y extráelo en tu directorio de trabajo.
+
+## 1- En archivo src/main/resources/application.properties
+
+```bash
+spring.datasource.url=jdbc:postgresql://localhost:5432/api-sample-inmobiliaria 
+spring.datasource.username=postgres 
+spring.datasource.password= spring.jpa.hibernate.ddl-auto=update 
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+```
+## Modelo de Datos
 
+    Cliente
+    ProyectoInmobiliario
+    Unidad
 
-# Modelo de Datos
+## Configuración de Swagger
 
-1. Cliente
-2. ProyectoInmobiliario
-3. Unidad
+```bash
+@Configuration 
+@EnableSwagger2 
 
-
-# Configuración de Swagger
-
-@Configuration
-@EnableSwagger2
 public class SwaggerConfig {
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.tu.paquete"))
-                .paths(PathSelectors.any())
-                .build();
-    }
+
+@Bean
+public Docket api() { 
+  return new Docket(DocumentationType.SWAGGER_2) 
+    .select() 
+    .apis(RequestHandlerSelectors.basePackage("com.tu.paquete")) 
+    .paths(PathSelectors.any()) 
+    .build(); 
+  } 
 }
 
+```
 
 http://localhost:8080/swagger-ui.html
 
 
-# Estructura
+## Autor
 
-api-sample-inmobiliaria/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── com/
-│   │   │   │   ├── yourpackage/
-│   │   │   │   │   ├── ApiSampleInmobiliariaApplication.java  # Clase principal de Spring Boot
-│   │   │   │   │   ├── config/                                # Configuraciones (como SwaggerConfig)
-│   │   │   │   │   ├── controller/                            # Controladores REST
-│   │   │   │   │   │   ├── ProyectoInmobiliarioController.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   ├── model/                                 # Entidades y modelos de datos
-│   │   │   │   │   │   ├── Cliente.java
-│   │   │   │   │   │   ├── ProyectoInmobiliario.java
-│   │   │   │   │   │   ├── Unidad.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   ├── repository/                            # Repositorios JPA
-│   │   │   │   │   │   ├── ClienteRepository.java
-│   │   │   │   │   │   ├── ProyectoInmobiliarioRepository.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   ├── service/                               # Servicios (si es necesario)
-│   │   │   │   │   │   ├── ProyectoInmobiliarioService.java
-│   │   │   │   │   │   └── ...
-│   │   │   │   │   └── utils/                                 # Clases utilitarias y helpers
-│   │   ├── resources/                                         # Propiedades y recursos
-│   │   │   ├── application.properties                         # Configuración de Spring Boot
-│   │   │   ├── static/                                       # Archivos estáticos (HTML, CSS, JS)
-│   │   │   └── templates/                                    # Templates (si estás usando Thymeleaf u otro)
-├── .gitignore
-├── pom.xml                                                   # Archivo de configuración de Maven
-└── README.md
+- [@mauriciodurant](https://github.com/mdurant/api-inmobiliaria)
 
- 
+
+## Badges
+
+Add badges from somewhere like: [shields.io](https://shields.io/)
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/mdurant)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mdurantorres/)
+
+
+## Used By
+
+This project is used by the following companies:
+
+- Cualquiera.
+
